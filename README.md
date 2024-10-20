@@ -1,8 +1,8 @@
 # Welcome to Blogsmith Free!
 
-This is a free theme for Astro created by [Cosmic Themes](https://cosmicthemes.com/). It is a great place to house links to your various projects and socials.
+This is a free theme for Astro created by [Cosmic Themes](https://cosmicthemes.com/). This is a great starting point with various pages, features, and utilities to help you get started with your blog.
 
-[website demo](https://landingpad.cosmicthemes.com/)
+[website demo](https://blogsmithfree.cosmicthemes.com/)
 
 ## Quickstart
 
@@ -20,61 +20,60 @@ This is a free theme for Astro created by [Cosmic Themes](https://cosmicthemes.c
 
 I have created a few code tours to introduce you to the codebase. You will need the extension [Code Tour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour) to view them in VSCode.
 
-The source files have the following setup. Note that not all files are included - it is already long, no one wants it to be longer.
+The source files have the following setup. Note that not all files are listed here.
 
 ```
 .
-+-- .tours/
-¦   +-- code-intro.tour
-+-- .vscode/
-¦   +-- extensions.json
-+-- public/
-¦   +-- favicons/
-¦   ¦   +-- favicon.ico
-¦   +-- images/
-¦   +-- robots.txt
-+-- src/
-¦   +-- assets/
-¦   ¦   +-- images/
-¦   ¦       +-- site-logo.png
-¦   +-- components/
-¦   ¦   +-- Hero/
-¦   ¦   ¦   +-- Hero.astro
-¦   +-- config/
-¦   ¦   +-- navData.json.ts
-¦   +-- content/
-¦   ¦   +-- authors/
-¦   ¦   +-- blog/
-¦   ¦   +-- otherPages/
-¦   ¦   +-- config.ts
-¦   +-- js/
-¦   ¦   +-- utils.ts
-¦   +-- layouts/
-¦   ¦   +-- BaseLayout.astro
-¦   +-- pages/
-¦   ¦   +-- index.astro
-¦   ¦   +-- blog/
-¦   ¦   ¦   +-- [...page].astro
-¦   ¦   ¦   +-- [...slug].astro
-¦   ¦   +-- categories/
-¦   ¦   ¦   +-- [category]/
-¦   ¦   ¦   ¦   +-- [...page].astro
-¦   ¦   ¦   +-- index.astro
-¦   ¦   +-- [page].astro
-¦   ¦   +-- 404.astro
-¦   ¦   +-- index.astro
-¦   ¦   +-- rss.xml.ts
-¦   +-- styles/
-¦       +-- global.scss
-+-- .gitignore
-+-- .prettierrc.mjs
-+-- astro.config.mjs
-+-- netlify.toml
-+-- package.json
-+-- package-lock.json
-+-- README.md
-+-- tailwind.config.cjs
-+-- tsconfig.json
+├── .tours/
+│   └── code-intro.tour
+├── public/
+│   ├── favicons/
+│   │   └── favicon.ico
+│   ├── images/
+│   └── robots.txt
+├── src/
+│   ├── assets/
+│   │   └── images/
+│   │       └── site-logo.png
+│   ├── components/
+│   │   └── Hero/
+│   │       └── Hero.astro
+│   ├── config/
+│   │   └── navData.json.ts
+│   ├── content/
+│   │   ├── authors/
+│   │   ├── blog/
+│   │   ├── otherPages/
+│   │   └── config.ts
+│   ├── js/
+│   │   └── blogUtils.ts
+│   ├── layouts/
+│   │   └── BaseLayout.astro
+│   ├── pages/
+│   │   ├── index.astro
+│   │   ├── blog/
+│   │   │   ├── [...page].astro
+│   │   │   └── [...slug].astro
+│   │   ├── categories/
+│   │   │   ├── [category]/
+│   │   │   │   └── [...page].astro
+│   │   │   └── index.astro
+│   │   ├── [page].astro
+│   │   ├── 404.astro
+│   │   ├── index.astro
+│   │   └── rss.xml.ts
+│   └── styles/
+│       └── global.scss
+├── .gitignore
+├── .prettierrc.mjs
+├── astro.config.mjs
+├── keystatic.config.tsx
+├── netlify.toml
+├── package.json
+├── package-lock.json
+├── README.md
+├── tailwind.config.cjs
+└── tsconfig.json
 ```
 
 For robots like Google to see the correct sitemap, you will want to edit the `public/robots.txt` file to use your website domain.
