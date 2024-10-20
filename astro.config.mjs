@@ -1,7 +1,9 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import sitemap from "@astrojs/sitemap";
+
+import icon from "astro-icon"; // https://www.astroicon.dev/guides/upgrade/v1/
 import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
+import tailwind from "@astrojs/tailwind";
 import compress from "@playform/compress";
 import AutoImport from "astro-auto-import";
 
@@ -24,6 +26,26 @@ export default defineConfig({
     }),
     mdx(),
     tailwind(),
+    icon({
+      // I include only the icons I use. This is because if you use SSR, ALL icons will be included (no bueno)
+      // https://www.astroicon.dev/reference/configuration#include
+      include: {
+        tabler: [
+          "bulb",
+          "alert-triangle",
+          "flame",
+          "info-circle",
+          "arrow-narrow-left",
+          "arrow-narrow-right",
+          "menu-2",
+          "x",
+          "chevron-down",
+          "category",
+          "calendar-event",
+        ],
+      },
+    }),
+
     sitemap(),
     compress(),
   ],
