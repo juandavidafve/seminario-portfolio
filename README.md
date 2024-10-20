@@ -18,7 +18,7 @@ This is a free theme for Astro created by [Cosmic Themes](https://cosmicthemes.c
 
 ## Code Intro
 
-I have created a few code tours to introduce you to the codebase. You will need the extension [Code Tour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour) to view them in VSCode.
+I have created a code tour to introduce you to the codebase. You will need the extension [Code Tour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour) to view them in VSCode.
 
 The source files have the following setup. Note that not all files are listed here.
 
