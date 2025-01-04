@@ -45,8 +45,23 @@ export default defineConfig({
         ],
       },
     }),
-
     sitemap(),
-    compress(),
+    compress({
+      HTML: true,
+      JavaScript: true,
+      CSS: false,
+      Image: false, // astro:assets handles this. Enabling this can dramatically increase build times
+      SVG: false, // astro-icon handles this
+    }),
   ],
+  // get rid of Dart Sass deprecation warning
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler",
+        },
+      },
+    },
+  },
 });
