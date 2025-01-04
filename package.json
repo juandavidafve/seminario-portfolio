@@ -1,13 +1,14 @@
 {
   "name": "blogsmith-free",
   "type": "module",
-  "version": "0.3.3",
+  "version": "4.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write \"**/*.{astro,ts,tsx,md,mdx,js,cjs,mjs,json}\" --cache"
   },
   "dependencies": {
     "@astrojs/mdx": "^3.1.8",
