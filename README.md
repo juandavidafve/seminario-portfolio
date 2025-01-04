@@ -7,8 +7,8 @@ This is a free theme for Astro created by [Cosmic Themes](https://cosmicthemes.c
 ## Quickstart
 
 1. Fork this project to your own repository, and clone it to your local machine
-2. Install all necessary packages with `npm install`
-3. Run `npm run dev` to start the dev server
+2. Install all necessary packages with `npm install` or `pnpm install`
+3. Run `npm run dev` or `pnpm dev` to start the dev server
 4. Now you can setup the site to your liking!
    - [Style customization](https://cosmicthemes.com/docs/styles/)
    - [Content editing](https://cosmicthemes.com/docs/content/)
@@ -40,11 +40,10 @@ The source files have the following setup. Note that not all files are listed he
 │   │       └── Hero.astro
 │   ├── config/
 │   │   └── navData.json.ts
-│   ├── content/
+│   ├── data/
 │   │   ├── authors/
 │   │   ├── blog/
-│   │   ├── otherPages/
-│   │   └── config.ts
+│   │   └── otherPages/
 │   ├── js/
 │   │   └── blogUtils.ts
 │   ├── layouts/
@@ -62,8 +61,9 @@ The source files have the following setup. Note that not all files are listed he
 │   │   ├── 404.astro
 │   │   ├── index.astro
 │   │   └── rss.xml.ts
-│   └── styles/
-│       └── global.scss
+│   ├── styles/
+│   │   └── global.scss
+│   └── content.config.ts
 ├── .gitignore
 ├── .prettierrc.mjs
 ├── astro.config.mjs

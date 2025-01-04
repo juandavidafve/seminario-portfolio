@@ -125,10 +125,10 @@ export async function getAllAuthorsData(
 	authors: CollectionEntry<"blog">["data"]["authors"],
 ): Promise<CollectionEntry<"authors">[]> {
 	const authorsData = authors.map(async (author) => {
-		const authorData = await getEntry("authors", author.slug);
+		const authorData = await getEntry("authors", author.id);
 
 		if (authorData === undefined) {
-			throw new Error(`Author "${author.slug}" not found in "authors" collection.`);
+			throw new Error(`Author "${author.id}" not found in "authors" collection.`);
 		}
 
 		return authorData;

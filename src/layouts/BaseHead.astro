@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry } from "astro:content";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 // component imports
 import Seo from "@components/Seo/Seo.astro";
@@ -63,4 +63,4 @@ import interVariable from "@fontsource-variable/inter/files/inter-latin-wght-nor
 />
 
 <!-- no fallback as I saw issues with firefox fallback -->
-{siteData.useViewTransitions && <ViewTransitions fallback="none" />}
+{siteData.useViewTransitions && <ClientRouter fallback="none" />}
