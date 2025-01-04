@@ -22,8 +22,8 @@
       "line": 21
     },
     {
-      "file": "src/data/config.ts",
-      "description": "In the \"content\" folder you will find blog posts, author info, and other pages. These all work with markdown or mdx files. You can see examples of what to put. Using the schema defined in this \"config.ts\" file, when you try to \"npm run dev\" this site, it will validate the item against this schema and give you a detailed error if you forgot something required.",
+      "file": "src/content.config.ts",
+      "description": "In the \"data\" folder you will find blog posts, author info, and other pages. These all work with markdown or mdx files. You can see examples of what to put. Using the schema defined in this \"config.ts\" file, when you try to \"npm run dev\" this site, it will validate the item against this schema and give you a detailed error if you forgot something required.",
       "line": 4
     },
     {
