@@ -1,5 +1,6 @@
 # build output
 dist/
+
 # generated types
 .astro/
 
@@ -19,5 +20,7 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# Local Netlify folder
+# Local hosting provider folders
 .netlify
+.vercel
+.wrangler

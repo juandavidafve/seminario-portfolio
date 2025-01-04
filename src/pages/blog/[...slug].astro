@@ -1,4 +1,5 @@
 ---
+import { render } from "astro:content";
 import { type InferGetStaticPropsType } from "astro";
 
 // layout
@@ -8,19 +9,19 @@ import BlogLayout from "@layouts/BlogLayoutCentered.astro";
 import { getAllPosts } from "@js/blogUtils";
 
 export async function getStaticPaths() {
-  const posts = await getAllPosts();
+	const posts = await getAllPosts();
 
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: post,
-  }));
+	return posts.map((post) => ({
+		params: { slug: post.id },
+		props: post,
+	}));
 }
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const post = Astro.props as Props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 ---
 
 <BlogLayout post={post}>
-  <Content />
+	<Content />
 </BlogLayout>
