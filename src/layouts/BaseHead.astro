@@ -27,10 +27,15 @@ const {
 	postFrontmatter,
 	noindex = false,
 } = Astro.props as Props;
+
+import interVariable from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2";
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+
+<!-- local font preload for better performance when not using ClientRouter -->
+<link rel="preload" href={interVariable} as="font" type="font/woff2" crossorigin="anonymous" />
 
 <!-- Favicons. Generated from https://realfavicongenerator.net/ -->
 <link rel="icon" href="/favicons/favicon.ico" />
@@ -56,10 +61,6 @@ const {
 	postFrontmatter={postFrontmatter}
 	noindex={noindex}
 />
-
-<!-- Inter Font: https://rsms.me/inter/ -->
-<link rel="preconnect" href="https://rsms.me/" />
-<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 
 <!-- no fallback as I saw issues with firefox fallback -->
 {siteData.useViewTransitions && <ViewTransitions fallback="none" />}

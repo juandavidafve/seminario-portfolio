@@ -49,13 +49,18 @@ export default defineConfig({
 		compress({
 			HTML: true,
 			JavaScript: true,
-			CSS: false,
+			CSS: true,
 			Image: false, // astro:assets handles this. Enabling this can dramatically increase build times
 			SVG: false, // astro-icon handles this
 		}),
 	],
-	// get rid of Dart Sass deprecation warning
+
 	vite: {
+		// stop inlining short scripts to fix issues with ClientRouter: https://github.com/withastro/astro/issues/12804
+		build: {
+			assetsInlineLimit: 0,
+		},
+		// get rid of Dart Sass deprecation warning
 		css: {
 			preprocessorOptions: {
 				scss: {
