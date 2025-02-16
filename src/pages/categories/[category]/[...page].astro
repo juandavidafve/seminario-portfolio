@@ -50,7 +50,7 @@ const formattedCategory = categorify(category);
 		<h1 class="h1 text-center">
 			Blog Posts about <span class="main-text-gradient">{formattedCategory.toLowerCase()}</span>
 		</h1>
-		<hr class="mx-auto mt-4 max-w-[30%] rounded-full border-none bg-primary-600/50 pt-1" />
+		<hr class="bg-primary-600/50 mx-auto mt-4 max-w-[30%] rounded-full border-none pt-1" />
 		<div class="mt-10 grid gap-4 md:grid-cols-2">
 			{page.data.map((post) => <PostCard post={post} showDescription={false} />)}
 		</div>
