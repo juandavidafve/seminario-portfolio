@@ -63,6 +63,19 @@ interface Props {
 	</div>
 </div>
 
+<style>
+	@import "tailwindcss/theme" theme(reference);
+	@import "@/styles/tailwind-theme.css" theme(reference);
+
+	.navbar--scrolled {
+		@apply border-b-base-300/60 bg-base-100/60 backdrop-blur;
+	}
+
+	.navbar--initial {
+		@apply border-b-transparent bg-transparent;
+	}
+</style>
+
 <script>
 	let navbar: HTMLElement | null;
 
@@ -70,15 +83,11 @@ interface Props {
 		if (navbar) {
 			if (window.scrollY > 50) {
 				// if we have scrolled down the page a bit, add a frosted-glass look to the navbar
-				navbar.classList.add("bg-base-100/60");
-				navbar.classList.remove("bg-transparent");
-				navbar.classList.add("border-b-base-300/60");
-				navbar.classList.remove("border-b-transparent");
+				navbar.classList.add("navbar--scrolled");
+				navbar.classList.remove("navbar--initial");
 			} else {
-				navbar.classList.remove("bg-base-100/60");
-				navbar.classList.add("bg-transparent");
-				navbar.classList.remove("border-b-base-300/60");
-				navbar.classList.add("border-b-transparent");
+				navbar.classList.remove("navbar--scrolled");
+				navbar.classList.add("navbar--initial");
 			}
 		}
 	}
