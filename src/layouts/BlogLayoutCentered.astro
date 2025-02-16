@@ -32,7 +32,7 @@ const authorsData = await getAllAuthorsData(authors);
 	authorsData={authorsData}
 	postFrontmatter={post.data}
 >
-	<article class="container pt-24 md:pt-36">
+	<article class="site-container pt-24 md:pt-36">
 		<!-- Blog post info -->
 		<div class="mx-auto flex max-w-[800px] flex-col items-center">
 			<div class="flex w-full">
@@ -61,7 +61,7 @@ const authorsData = await getAllAuthorsData(authors);
 									</figure>
 									<div class="my-auto ml-2">
 										<a
-											class="opacity-80 transition hover:text-primary-700"
+											class="hover:text-primary-700 opacity-80 transition"
 											href={authorData.data.authorLink}
 											target="_blank"
 											rel="noopener noreferrer"
@@ -108,7 +108,7 @@ const authorsData = await getAllAuthorsData(authors);
 							</div>
 						)
 					}
-					<section id="blog-post-content" class="prose mx-auto md:text-lg">
+					<section id="blog-post-content" class="markdown-content mx-auto md:text-lg">
 						<slot />
 					</section>
 

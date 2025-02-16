@@ -7,7 +7,7 @@ _Get your blog up and running in hours, not weeks._
 
 Blogsmith is the perfect way to showcase your writing and connect with your audience. It's built on Astro, a modern static site generator that's fast, lightweight, and SEO-friendly. And it uses Tailwind CSS, a powerful utility-first CSS framework that makes it easy to style your blog.
 
-This is the free version with limited features. You can [purchase the pro version](https://cosmicthemes.com/themes/blogsmith-pro/) for only ~~$79~~ $49! The pro version includes additional features such as:
+This is the free version with limited features. You can [purchase the pro version](https://cosmicthemes.com/themes/blogsmith-pro/) for only ~~$97~~ $47! The pro version includes additional features such as:
 
 - Full i18n capabilities with configuration script
 - Keystatic CMS integration
