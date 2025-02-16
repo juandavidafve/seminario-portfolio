@@ -17,13 +17,13 @@
       "line": 25
     },
     {
-      "file": "tailwind.config.cjs",
+      "file": "src/styles/tailwind-theme.css",
       "description": "Here you can edit the colors your website is using. You can use any of Tailwind's default colors, or create your own.",
-      "line": 21
+      "line": 6
     },
     {
       "file": "src/content.config.ts",
-      "description": "In the \"data\" folder you will find blog posts, author info, and other pages. These all work with markdown or mdx files. You can see examples of what to put. Using the schema defined in this \"config.ts\" file, when you try to \"npm run dev\" this site, it will validate the item against this schema and give you a detailed error if you forgot something required.",
+      "description": "In the \"content\" folder you will find blog posts, author info, and other pages. These all work with markdown or mdx files. You can see examples of what to put. Using the schema defined in this \"config.ts\" file, when you try to \"npm run dev\" this site, it will validate the item against this schema and give you a detailed error if you forgot something required.",
       "line": 4
     },
     {
@@ -39,7 +39,7 @@
     {
       "file": "src/pages/blog/[...page].astro",
       "description": "The blog post index page is paginated, meaning after \"pageSize\" blog posts there will be pagination at the bottom to go to the next page for more blog posts. I recommend changing this from 2 to at least 6.",
-      "line": 16
+      "line": 18
     },
     {
       "file": "src/pages/index.astro",
