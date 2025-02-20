@@ -2,20 +2,65 @@
 import { members } from "../../data/members/integrantesData";
 ---
 
-<div class="grid grid-cols-2 gap-6 lg:grid-cols-3">
-	{
-		members.map((member) => (
-			<div class="rounded-2xl bg-white p-4 text-center shadow-lg">
-				<a href={member.github} target="_blank" rel="noopener noreferrer">
-					<img
-						src={`${member.img}`}
-						alt={`Foto de ${member.name}`}
-						class="mx-auto mb-4 h-32 w-32 rounded-bg border-3 border-gray-300 transition duration-300 hover:border-blue-500"
-					/>
-				</a>
-				<h2 class="text-xl font-semibold ">{member.name}</h2>
-				<p class="text-gray-600">{member.rol}</p>
-			</div>
-		))
-	}
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center">
+  {members.map((member) => (
+    <div class="relative h-72 w-full max-w-xs mx-auto cursor-pointer perspective" onclick="this.classList.toggle('flipped')">
+      <div class="relative h-full w-full transform transition-transform duration-500 [transform-style:preserve-3d]">
+        {/* Front Side */}
+        <div class="absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-white p-6 text-center shadow-lg [backface-visibility:hidden] front">
+			<button class="absolute top-2 right-2 p-1 bg-gray-200 rounded-full shadow hover:bg-gray-300 transition">
+			⟳
+          </button>
+          <a href={member.github} target="_blank" rel="noopener noreferrer">
+            <img
+              src={`${member.img}`}
+              alt={`Foto de ${member.name}`}
+              class="mx-auto mb-2 h-24 w-24 rounded-full border-2 border-gray-300 transition duration-300 hover:border-blue-500"
+            />
+          </a>
+          <h2 class="text-lg font-semibold">{member.name}</h2>
+          <p class="text-gray-600 text-sm mt-1 max-w-[90%]">{member.rol}</p>
+        </div>
+        
+        {/* Back Side */}
+        <div class="absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-blue-500 p-6 text-center text-white shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden] back">
+			<button class="absolute top-2 right-2 p-1 bg-gray-200 rounded-full shadow hover:bg-gray-300 transition">
+			⟳
+          </button>
+          <p class="text-lg font-semibold">Descripción</p>
+          <p class="mt-2 text-sm max-w-[90%]">{member.description}</p>
+        </div>
+      </div>
+    </div>
+  ))}
 </div>
+
+<style>
+  .perspective {
+    perspective: 1000px;
+  }
+
+  .flipped .relative {
+    transform: rotateY(180deg);
+  }
+
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  @media (min-width: 640px) {
+    .grid-cols-2-center {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .grid-cols-3-center {
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+    }
+  }
+</style>

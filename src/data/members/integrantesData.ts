@@ -21,7 +21,7 @@ export interface Member {
     {
       name: "Saimer Saavedra",
       code: "1152280",
-      rol: "Diseñador UX/UI",
+      rol: "Desarrollador Frontend, Diseñador UX/UI",
       github: "https://github.com/saimersaavedra",
       user: "saimersaavedra",
       img: "/avatars/saimer.jpg",
