@@ -1,10 +1,21 @@
 ---
-import Card from "./Card.astro";
+import { members } from "../../data/members/integrantesData";
 ---
 
-<div class="grid grid-cols-2 gap-6 lg:grid-cols-4">
-	<Card />
-	<Card />
-	<Card />
-	<Card />
+<div class="grid grid-cols-2 gap-6 lg:grid-cols-3">
+	{
+		members.map((member) => (
+			<div class="rounded-2xl bg-white p-4 text-center shadow-lg">
+				<a href={member.github} target="_blank" rel="noopener noreferrer">
+					<img
+						src={`${member.img}`}
+						alt={`Foto de ${member.name}`}
+						class="mx-auto mb-4 h-32 w-32 rounded-bg border-3 border-gray-300 transition duration-300 hover:border-blue-500"
+					/>
+				</a>
+				<h2 class="text-xl font-semibold ">{member.name}</h2>
+				<p class="text-gray-600">{member.rol}</p>
+			</div>
+		))
+	}
 </div>
