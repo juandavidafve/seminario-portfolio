@@ -22,6 +22,7 @@ export default defineConfig({
 			imports: [
 				// https://github.com/delucis/astro-auto-import
 				"@components/Admonition/Admonition.astro",
+				"@components/TeamCard/TeamCard.astro",
 			],
 		}),
 		mdx(),

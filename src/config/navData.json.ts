@@ -23,50 +23,78 @@ export type navItem = navLinkItem | navDropdownItem;
 
 // note: 1 level of dropdown is supported
 const navConfig: navItem[] = [
+	//{
+	//	text: "Blog",
+	//	link: "/blog/",
+	//},
 	{
-		text: "Blog",
-		link: "/blog/",
-	},
-	{
-		// get the categories used in blog posts, to put into a navbar dropdown
-		text: "Categories",
-		dropdown: processedCategories.map(([category, count]) => {
-			return {
-				text: humanize(category),
-				link: `/categories/${category}/`,
-			};
-		}),
-	},
-	{
-		text: "Pages",
-		dropdown: [
-			{
-				text: "Categories",
-				link: "/categories/",
-			},
-			{
-				text: "Elements",
-				link: "/elements/",
-			},
-			{
-				text: "Privacy Policy",
-				link: "/privacy-policy/",
-			},
-			{
-				text: "404",
-				link: "/not-a-link/",
-			},
-			{
-				text: "RSS Feed",
-				link: "/rss.xml",
-				newTab: true,
-			},
-		],
-	},
-	{
-		text: "About",
+		text: "Inicio",
 		link: "/about/",
 	},
+	{
+		text: "Servicios",
+		link: "/about/",
+	},
+	{
+		text: "Nosotros",
+		link: "/about/",
+	},
+	{
+		text: "Clientes",
+		link: "/about/",
+	},
+	{
+		text: "Equipo",
+		link: "/team/",
+	},
+	{
+		text: "Contacto",
+		link: "/about/",
+	},
+	//{
+	//	// get the categories used in blog posts, to put into a navbar dropdown
+	//	text: "Categories",
+	//	dropdown: processedCategories.map(([category, count]) => {
+	//		return {
+	//			text: humanize(category),
+	//			link: `/categories/${category}/`,
+	//		};
+	//	}),
+	//},
+	//{
+	//	text: "Pages",
+	//	dropdown: [
+	//		{
+	//			text: "Categories",
+	//			link: "/categories/",
+	//		},
+	//		{
+	//			text: "Elements",
+	//			link: "/elements/",
+	//		},
+	//		{
+	//			text: "Privacy Policy",
+	//			link: "/privacy-policy/",
+	//		},
+	//		{
+	//			text: "404",
+	//			link: "/not-a-link/",
+	//		},
+	//		{
+	//			text: "RSS Feed",
+	//			link: "/rss.xml",
+	//			newTab: true,
+	//		},
+	//		{
+	//			text: "Quienes Somos",
+	//			link: "/elements/",
+	//		},
+	//	],
+	//},
+	//{
+	//	text: "About",
+	//	link: "/about/",
+	//},
 ];
 
 export default navConfig;

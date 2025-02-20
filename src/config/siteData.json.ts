@@ -16,9 +16,9 @@ export interface SiteDataProps {
 
 // Update this file with your site specific information
 const siteData: SiteDataProps = {
-	name: "Blogsmith",
+	name: "SystemSoft",
 	// Your website's title and description (meta fields)
-	title: "Blogsmith - a beautiful starter blog template using Astro and Tailwind CSS",
+	title: "SystemSoft",
 	description:
 		"Get your new blog website up and running quickly with our beautiful website theme designed using Astro and Tailwind CSS. Perfect for freelancers, developers, startups, and personal use.",
 	useViewTransitions: true,
